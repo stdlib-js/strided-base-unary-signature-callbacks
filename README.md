@@ -41,6 +41,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/strided-base-unary-signature-callbacks/tags). For example,
+
+```javascript
 import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.0.1-deno/mod.js';
 ```
 
@@ -119,7 +124,7 @@ import signatures from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary
 import identity from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-identity@deno/mod.js';
 import cidentity from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentity@deno/mod.js';
 import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentityf@deno/mod.js';
-import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.0.1-deno/mod.js';
+import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@deno/mod.js';
 
 // Get the list of supported strided array data types:
 var dt = dtypes();
