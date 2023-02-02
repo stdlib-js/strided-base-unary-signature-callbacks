@@ -43,6 +43,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+callbacks = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/strided-base-unary-signature-callbacks/tags). For example,
+
+```javascript
 callbacks = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.0.1-umd/browser.js' )
 ```
 
@@ -55,7 +60,7 @@ var callbacks = require( 'path/to/vendor/umd/strided-base-unary-signature-callba
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.0.1-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -146,7 +151,7 @@ A callback `table` should have the following properties:
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-identity@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentity@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentityf@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.0.1-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
