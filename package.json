@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/strided-base-unary-signature-callbacks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Assign callbacks to unary interfaces according to type promotion rules.",
   "license": "Apache-2.0",
   "author": {
