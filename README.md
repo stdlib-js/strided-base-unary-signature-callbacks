@@ -34,30 +34,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/strided-base-unary-signature-callbacks
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
+import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@esm/index.mjs';
 ```
 
 #### callbacks( table, signatures )
@@ -65,10 +49,10 @@ var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
 Assigns callbacks to unary interfaces according to type [promotion rules][@stdlib/ndarray/promotion-rules].
 
 ```javascript
-var signatures = require( '@stdlib/strided-base-unary-dtype-signatures' );
-var identity = require( '@stdlib/math-base-special-identity' );
-var cidentity = require( '@stdlib/math-base-special-cidentity' );
-var cidentityf = require( '@stdlib/math-base-special-cidentityf' );
+import signatures from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-dtype-signatures@esm/index.mjs';
+import identity from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-identity@esm/index.mjs';
+import cidentity from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentity@esm/index.mjs';
+import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentityf@esm/index.mjs';
 
 var dtypes = [
     'float64',
@@ -129,13 +113,18 @@ A callback `table` should have the following properties:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var dtypes = require( '@stdlib/strided-dtypes' );
-var signatures = require( '@stdlib/strided-base-unary-dtype-signatures' );
-var identity = require( '@stdlib/math-base-special-identity' );
-var cidentity = require( '@stdlib/math-base-special-cidentity' );
-var cidentityf = require( '@stdlib/math-base-special-cidentityf' );
-var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-dtypes@esm/index.mjs';
+import signatures from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-dtype-signatures@esm/index.mjs';
+import identity from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-identity@esm/index.mjs';
+import cidentity from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentity@esm/index.mjs';
+import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentityf@esm/index.mjs';
+import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@esm/index.mjs';
 
 // Get the list of supported strided array data types:
 var dt = dtypes();
@@ -153,6 +142,10 @@ var table = {
 // Generate a list of callbacks according to type promotion rules:
 var clbks = callbacks( table, sigs );
 // returns [...]
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -184,7 +177,7 @@ var clbks = callbacks( table, sigs );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -244,7 +237,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/strided-base-unary-signature-callbacks/main/LICENSE
 
-[@stdlib/ndarray/promotion-rules]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/promotion-rules]: https://github.com/stdlib-js/stdlib/tree/esm
 
 </section>
 
