@@ -41,7 +41,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@esm/index.mjs';
+import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.0.1-esm/index.mjs';
 ```
 
 #### callbacks( table, signatures )
@@ -124,7 +124,7 @@ import signatures from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary
 import identity from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-identity@esm/index.mjs';
 import cidentity from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentity@esm/index.mjs';
 import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentityf@esm/index.mjs';
-import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@esm/index.mjs';
+import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.0.1-esm/index.mjs';
 
 // Get the list of supported strided array data types:
 var dt = dtypes();
