@@ -34,43 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/strided-base-unary-signature-callbacks
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-callbacks = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/strided-base-unary-signature-callbacks/tags). For example,
-
-```javascript
-callbacks = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.0.1-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var callbacks = require( 'path/to/vendor/umd/strided-base-unary-signature-callbacks/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.callbacks;
-})();
-</script>
+var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
 ```
 
 #### callbacks( table, signatures )
@@ -142,18 +129,13 @@ A callback `table` should have the following properties:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-dtypes@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-dtype-signatures@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-identity@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentity@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentityf@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var dtypes = require( '@stdlib/strided-dtypes' );
+var signatures = require( '@stdlib/strided-base-unary-dtype-signatures' );
+var identity = require( '@stdlib/math-base-special-identity' );
+var cidentity = require( '@stdlib/math-base-special-cidentity' );
+var cidentityf = require( '@stdlib/math-base-special-cidentityf' );
+var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
 
 // Get the list of supported strided array data types:
 var dt = dtypes();
@@ -171,11 +153,6 @@ var table = {
 // Generate a list of callbacks according to type promotion rules:
 var clbks = callbacks( table, sigs );
 // returns [...]
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -237,8 +214,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/strided-base-unary-signature-callbacks.svg
 [npm-url]: https://npmjs.org/package/@stdlib/strided-base-unary-signature-callbacks
 
-[test-image]: https://github.com/stdlib-js/strided-base-unary-signature-callbacks/actions/workflows/test.yml/badge.svg?branch=v0.0.1
-[test-url]: https://github.com/stdlib-js/strided-base-unary-signature-callbacks/actions/workflows/test.yml?query=branch:v0.0.1
+[test-image]: https://github.com/stdlib-js/strided-base-unary-signature-callbacks/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/strided-base-unary-signature-callbacks/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/strided-base-unary-signature-callbacks/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/strided-base-unary-signature-callbacks?branch=main
@@ -267,7 +244,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/strided-base-unary-signature-callbacks/main/LICENSE
 
-[@stdlib/ndarray/promotion-rules]: https://github.com/stdlib-js/stdlib/tree/umd
+[@stdlib/ndarray/promotion-rules]: https://github.com/stdlib-js/stdlib
 
 </section>
 
