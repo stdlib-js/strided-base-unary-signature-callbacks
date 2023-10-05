@@ -44,7 +44,7 @@
     "@stdlib/types": "^0.1.0"
   },
   "devDependencies": {
-    "@stdlib/assert-is-array": "^0.1.0",
+    "@stdlib/assert-is-array": "^0.1.1",
     "@stdlib/assert-is-complex128": "^0.1.0",
     "@stdlib/assert-is-complex64": "^0.1.0",
     "@stdlib/assert-is-function-array": "^0.1.0",
@@ -57,7 +57,7 @@
     "@stdlib/math-base-special-cceilf": "^0.1.0",
     "@stdlib/math-base-special-ceil": "^0.1.0",
     "@stdlib/math-base-special-cidentity": "^0.1.0",
-    "@stdlib/math-base-special-cidentityf": "^0.1.0",
+    "@stdlib/math-base-special-cidentityf": "^0.1.1",
     "@stdlib/math-base-special-identity": "^0.1.0",
     "@stdlib/strided-base-unary-dtype-signatures": "^0.1.0",
     "@stdlib/strided-dtypes": "^0.1.0",
