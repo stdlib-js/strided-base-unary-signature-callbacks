@@ -48,7 +48,7 @@
     "@stdlib/assert-is-complex128": "^0.1.1",
     "@stdlib/assert-is-complex64": "^0.1.1",
     "@stdlib/assert-is-function-array": "^0.1.0",
-    "@stdlib/bench": "^0.2.0",
+    "@stdlib/bench": "^0.2.1",
     "@stdlib/complex-imag": "^0.1.1",
     "@stdlib/complex-imagf": "^0.1.1",
     "@stdlib/complex-real": "^0.1.1",
