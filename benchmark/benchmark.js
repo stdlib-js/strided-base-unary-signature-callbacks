@@ -20,7 +20,7 @@
 
 // MODULES //
 
-var bench = require( '@stdlib/bench' );
+var bench = require( '@stdlib/bench-harness' );
 var isArray = require( '@stdlib/assert-is-array' );
 var dtypes = require( '@stdlib/strided-dtypes' );
 var signatures = require( '@stdlib/strided-base-unary-dtype-signatures' );
