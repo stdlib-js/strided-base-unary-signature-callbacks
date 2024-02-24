@@ -45,32 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/strided-base-unary-signature-callbacks
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
+callbacks = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var callbacks = require( 'path/to/vendor/umd/strided-base-unary-signature-callbacks/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.callbacks;
+})();
+</script>
 ```
 
 #### callbacks( table, signatures )
@@ -142,13 +148,18 @@ A callback `table` should have the following properties:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var dtypes = require( '@stdlib/strided-dtypes' );
-var signatures = require( '@stdlib/strided-base-unary-dtype-signatures' );
-var identity = require( '@stdlib/math-base-special-identity' );
-var cidentity = require( '@stdlib/math-base-special-cidentity' );
-var cidentityf = require( '@stdlib/math-base-special-cidentityf' );
-var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-dtypes@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-dtype-signatures@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-identity@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentity@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cidentityf@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 // Get the list of supported strided array data types:
 var dt = dtypes();
@@ -166,6 +177,11 @@ var table = {
 // Generate a list of callbacks according to type promotion rules:
 var clbks = callbacks( table, sigs );
 // returns [...]
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -266,11 +282,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/strided-base-unary-signature-callbacks/main/LICENSE
 
-[@stdlib/ndarray/promotion-rules]: https://github.com/stdlib-js/ndarray-promotion-rules
+[@stdlib/ndarray/promotion-rules]: https://github.com/stdlib-js/ndarray-promotion-rules/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/strided/base/unary-dtype-signatures]: https://github.com/stdlib-js/strided-base-unary-dtype-signatures
+[@stdlib/strided/base/unary-dtype-signatures]: https://github.com/stdlib-js/strided-base-unary-dtype-signatures/tree/umd
 
 <!-- </related-links> -->
 
