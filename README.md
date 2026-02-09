@@ -45,19 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/strided-base-unary-signature-callbacks
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/strided-base-unary-signature-callbacks/tags). For example,
-
-```javascript
-import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@v0.2.3-esm/index.mjs';
+var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
 ```
 
 #### callbacks( table, signatures )
@@ -65,10 +78,10 @@ import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-
 Assigns callbacks to unary interfaces according to type [promotion rules][@stdlib/ndarray/promotion-rules].
 
 ```javascript
-import signatures from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-dtype-signatures@esm/index.mjs';
-import identity from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-identity@esm/index.mjs';
-import cidentity from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-identity@esm/index.mjs';
-import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@esm/index.mjs';
+var signatures = require( '@stdlib/strided-base-unary-dtype-signatures' );
+var identity = require( '@stdlib/number-float64-base-identity' );
+var cidentity = require( '@stdlib/complex-float64-base-identity' );
+var cidentityf = require( '@stdlib/complex-float32-base-identity' );
 
 var dtypes = [
     'float64',
@@ -129,18 +142,13 @@ A callback `table` should have the following properties:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-dtypes@esm/index.mjs';
-import signatures from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-dtype-signatures@esm/index.mjs';
-import identity from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-identity@esm/index.mjs';
-import cidentity from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-identity@esm/index.mjs';
-import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@esm/index.mjs';
-import callbacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-unary-signature-callbacks@esm/index.mjs';
+```javascript
+var dtypes = require( '@stdlib/strided-dtypes' );
+var signatures = require( '@stdlib/strided-base-unary-dtype-signatures' );
+var identity = require( '@stdlib/number-float64-base-identity' );
+var cidentity = require( '@stdlib/complex-float64-base-identity' );
+var cidentityf = require( '@stdlib/complex-float32-base-identity' );
+var callbacks = require( '@stdlib/strided-base-unary-signature-callbacks' );
 
 // Get the list of supported strided array data types:
 var dt = dtypes();
@@ -158,10 +166,6 @@ var table = {
 // Generate a list of callbacks according to type promotion rules:
 var clbks = callbacks( table, sigs );
 // returns [...]
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -199,7 +203,7 @@ var clbks = callbacks( table, sigs );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -229,8 +233,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/strided-base-unary-signature-callbacks.svg
 [npm-url]: https://npmjs.org/package/@stdlib/strided-base-unary-signature-callbacks
 
-[test-image]: https://github.com/stdlib-js/strided-base-unary-signature-callbacks/actions/workflows/test.yml/badge.svg?branch=v0.2.3
-[test-url]: https://github.com/stdlib-js/strided-base-unary-signature-callbacks/actions/workflows/test.yml?query=branch:v0.2.3
+[test-image]: https://github.com/stdlib-js/strided-base-unary-signature-callbacks/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/strided-base-unary-signature-callbacks/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/strided-base-unary-signature-callbacks/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/strided-base-unary-signature-callbacks?branch=main
@@ -262,11 +266,11 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/strided-base-unary-signature-callbacks/main/LICENSE
 
-[@stdlib/ndarray/promotion-rules]: https://github.com/stdlib-js/ndarray-promotion-rules/tree/esm
+[@stdlib/ndarray/promotion-rules]: https://github.com/stdlib-js/ndarray-promotion-rules
 
 <!-- <related-links> -->
 
-[@stdlib/strided/base/unary-dtype-signatures]: https://github.com/stdlib-js/strided-base-unary-dtype-signatures/tree/esm
+[@stdlib/strided/base/unary-dtype-signatures]: https://github.com/stdlib-js/strided-base-unary-dtype-signatures
 
 <!-- </related-links> -->
 
